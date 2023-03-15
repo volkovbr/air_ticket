@@ -2,11 +2,13 @@ package ru.netology.manager;
 
 import ru.netology.domaine.Ticket;
 import ru.netology.repository.RepositoryTicket;
+import ru.netology.service.TicketTravelComparator;
 
 import java.util.Arrays;
 
 public class ManagerTicket {
     private RepositoryTicket repo;
+    TicketTravelComparator comparator=new TicketTravelComparator();
 
     public ManagerTicket(RepositoryTicket repo) {
         this.repo = repo;
@@ -26,7 +28,7 @@ public class ManagerTicket {
                 }
                 tmp[tmp.length - 1] = ticket;
                 result = tmp;
-                Arrays.sort(result);
+                Arrays.sort(result, comparator);
             }
         }
         return result;

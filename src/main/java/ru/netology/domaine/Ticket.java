@@ -18,6 +18,9 @@ public class Ticket implements Comparable<Ticket> {
     public Ticket() {
 
     }
+    public int getTravelTime(){
+        return travelTime;
+    }
 
     public int getId() {
         return id;
