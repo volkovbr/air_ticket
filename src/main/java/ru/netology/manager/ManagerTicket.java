@@ -26,9 +26,9 @@ public class ManagerTicket {
                 }
                 tmp[tmp.length - 1] = ticket;
                 result = tmp;
-                Arrays.sort(result);
             }
         }
+        Arrays.sort(result);
         return result;
     }
 }
